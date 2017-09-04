@@ -1,14 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-/*
- * Globals
- */
-
 /* Links */
 a,
 a:focus,
 a:hover {
   color: #fff;
 }
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
 
 /*
  * Base structure
@@ -17,7 +24,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #fff;
+  background-color: #333;
 }
 body {
   color: #fff;
@@ -25,39 +32,3 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-}
-
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 20px;
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-/*
- * Footer
- */
- .mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
-  background-color: #333;
-}
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
-}

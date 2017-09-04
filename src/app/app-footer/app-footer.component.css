@@ -1,0 +1,16 @@
+.mastfoot {
+  background-color: #333;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.inner {
+  padding: 30px;
+}
+
+@media (min-width: 768px) {
+  .mastfoot {
+    bottom: 0;
+    width: 100%;
+  }
+}

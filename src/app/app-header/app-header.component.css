@@ -1,0 +1,15 @@
+.masthead {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  /* Handle the widths */
+  .masthead {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
