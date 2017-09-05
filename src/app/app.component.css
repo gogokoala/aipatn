@@ -1,37 +1,39 @@
-/*
- * Globals
- */
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
+.bg-wrapper{
   width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  height:100%;
+  background-color:#333;
 }
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
+.bg-wrapper .cover{
+  position: absolute;
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
+  z-index:-3;
+  opacity: 1;
+  left:0;right:0;top:0;right:0;
 }
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
+.bg-wrapper .bg-image{
+  /*z-index:-2;*/
+  width:100%;
+  background-size:cover;
+  background-color: #333333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
-
-.cover {
-  background-image: url(../assets/images/meeting.jpg);
-  background-size: cover;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-@media (min-width: 768px) {
-  /* Handle the widths */
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+.bg-wrapper .bg-image-default{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /*z-index:-2;*/
+  width:100%;
+  background:url('../assets/images/bg/bg01.jpg') no-repeat center #333;
+  background-size:cover;
+  -webkit-background-size: cover;-moz-background-size: cover;
 }

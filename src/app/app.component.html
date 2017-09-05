@@ -1,20 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="site-wrapper">
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-      <app-header></app-header>
-
-      <div class="cover">
-        <router-outlet></router-outlet>
-      </div>
-
-      <app-footer></app-footer>
-
-    </div>
-  </div>
+<div class="bg-wrapper" id="bg-wrapper">
+    <div id="bg-image" class="bg-image" style="opacity:1;background-image: url('http://file.zlbaba.com/file/view1/13e7903df8f2e2b407fb50da4b7ac21d')"></div>
+    <div class="cover"></div>
 </div>
 
-
+<app-header></app-header>
+<div class="router-container">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
 
 
 
