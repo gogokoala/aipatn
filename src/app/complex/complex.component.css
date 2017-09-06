@@ -1,0 +1,38 @@
+/* complex search */
+.cs-main {
+    position:absolute;
+    z-index:99;
+    top: 50px;
+    height: 600px;
+    text-align:left;
+}
+.cs-search {
+    min-width: 1300px;
+    overflow-y: auto;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.cs-database {
+    max-height: 100%!important;
+    overflow: auto;
+}
+.cs-filter {
+    max-height: 100%!important;
+    overflow: auto;
+}
+
+
+.cs-database .sub-dbs {
+    padding-left: 35px;
+}
+.cs-search .cs-database>li {
+    margin-bottom: 3px;
+    padding: 3px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.cs-search .cs-database li {
+    line-height: 32px;
+}
