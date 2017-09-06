@@ -23,8 +23,13 @@ body {
   url('//at.alicdn.com/t/font_qdzhnyemaxb9be29.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_qdzhnyemaxb9be29.svg#iconfont') format('svg');
 }
+
 .iconfont {
   font-family: "iconfont";
   font-size: 16px;
   font-style: normal;
+}
+
+ol, ul {
+  list-style: none;
 }
