@@ -11,6 +11,9 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { LegalInstrumentsComponent } from './legal-instruments/legal-instruments.component';
 import { PatentComponent } from './patent/patent.component';
+import { SimpleComponent } from './simple/simple.component';
+import { ComplexComponent } from './complex/complex.component';
+import { PatentResultComponent } from './patent-result/patent-result.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { PatentComponent } from './patent/patent.component';
     AppHeaderComponent,
     AppFooterComponent,
     LegalInstrumentsComponent,
-    PatentComponent
+    PatentComponent,
+    SimpleComponent,
+    ComplexComponent,
+    PatentResultComponent
   ],
   imports: [
     BrowserModule,
