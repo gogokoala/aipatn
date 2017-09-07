@@ -1,903 +1,130 @@
-<div class="container-fluid cs-main">
+<div class="cs-main container-fluid">
   <div class="row cs-search">
     <div class="col-xs-2 cs-database">
-      <ul class="m-database-list Js_sc_table">
-        <li>
-          <label>
-                    <input type="checkbox" class="Js_sc_checkAll">
-                    <span class="database-i16 database-all"></span>
-                    <span class="Js_sc_table_data">全部数据</span>
+      <div *ngFor="let g of dbgroups" class="panel panel-primary">
+        <div class="panel-heading">
+          <input type="checkbox" checked="">
+          <span class="panel-title">{{g.name}}</span>
+        </div>
+        <div class="panel-body">
+            <ul>
+              <li *ngFor="let t of g.sub_types">
+                <label>
+                  <input type="checkbox" data-value="{{t.code}}" checked="">
+                  <span>{{t.name}}</span>
                 </label>
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-cn"></span>
-                            <span class="Js_sc_table_data">中国</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="1" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">发明公开</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="2" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="4" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">实用新型</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="8" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">外观设计</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="16" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">台湾</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="32" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">香港</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-us"></span>
-                            <span class="Js_sc_table_data">美国</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="64" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">美国授权专利</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="128" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">美国公开专利</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-ep"></span>
-                            <span class="Js_sc_table_data">欧洲专利局</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="256" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">欧专发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="512" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">欧专发明公开</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-wo"></span>
-                            <span class="Js_sc_table_data">世界知识产权组织</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="1024" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">世界知识产权组织</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-jp"></span>
-                            <span class="Js_sc_table_data">日本</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="2048" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">日本发明公开</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="4096" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">日本发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="8192" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">日本实用新型</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="16384" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">日本外观设计</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-gb"></span>
-                            <span class="Js_sc_table_data">英国</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="32768" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">英国发明公开</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="65536" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">英国发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="131072" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">英国外观设计</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-fr"></span>
-                            <span class="Js_sc_table_data">法国</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="262144" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">法国发明公开</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="524288" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">法国发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="1048576" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">法国实用新型</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="2097152" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">法国药物专利</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-de"></span>
-                            <span class="Js_sc_table_data">德国</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="4194304" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">德国发明公开</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="8388608" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">德国发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="16777216" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">德国实用新型</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-ch"></span>
-                            <span class="Js_sc_table_data">瑞士</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="33554432" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">瑞士发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="67108864" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">瑞士发明公开</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-kr"></span>
-                            <span class="Js_sc_table_data">韩国</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="134217728" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">韩国发明公开</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="268435456" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">韩国发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="536870912" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">韩国实用新型</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="1073741824" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">韩国外观设计</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-ru"></span>
-                            <span class="Js_sc_table_data">俄罗斯</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="2147483648" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">俄罗斯发明公开</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="4294967296" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">俄罗斯发明授权</span>
-                                </label>
-            </li>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="8589934592" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">俄罗斯实用新型</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-au"></span>
-                            <span class="Js_sc_table_data">澳大利亚</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="17179869184" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">澳大利亚</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-ca"></span>
-                            <span class="Js_sc_table_data">加拿大</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="34359738368" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">加拿大</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-in"></span>
-                            <span class="Js_sc_table_data">印度</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="68719476736" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">印度</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-fi"></span>
-                            <span class="Js_sc_table_data">芬兰</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="137438953472" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">芬兰</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-it"></span>
-                            <span class="Js_sc_table_data">意大利</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="274877906944" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">意大利</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-my"></span>
-                            <span class="Js_sc_table_data">马来西亚</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="549755813888" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">马来西亚</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-no"></span>
-                            <span class="Js_sc_table_data">挪威</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="1099511627776" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">挪威</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-nz"></span>
-                            <span class="Js_sc_table_data">新西兰</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="2199023255552" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">新西兰</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-pl"></span>
-                            <span class="Js_sc_table_data">波兰</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="4398046511104" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">波兰</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-se"></span>
-                            <span class="Js_sc_table_data">瑞典</span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="8796093022208" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">瑞典</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-        <li class="Js_database_tr">
-          <label class="Js_database_th selected">
-                            <input type="checkbox" class="Js_sc_checkLine">
-                            <span class="database-i16 database-all"></span>
-                            <span class="Js_sc_table_data"></span>
-                        </label>
-          <ul>
-            <li class="sub-dbs">
-              <label>
-                                    <input type="checkbox" data-value="17592186044416" class="Js_sc_checkBox" checked="">
-                                    <span class="Js_sc_table_data">其他</span>
-                                </label>
-            </li>
-          </ul>
-
-        </li>
-      </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
     </div>
+    <!--表达式-->
     <div class="col-xs-10 cs-filter">
-      <!--预检-->
-      <div class="m-advance m-advance-ads">
-
-        <form action="/search" method="post" id="Js_major_search_form">
-          <div class="m-advance-header">
-            <span class="title">检索表达式预览</span>
-
-
-          </div>
-
-          <div class="m-search-none">
-            <h1><b>sorry!</b>没有查询到"<span></span>"的相关专利</h1>
-            <p>没有搜索到相关专利，原因可能是：</p>
-            <p>· 此专利不存在。</p>
-            <p>· 通过申请(专利)号、公开(公告)号查询时，请直接输入号码，前面不用加"ZL"或者"CN"。</p>
-            <p>· 该发明创造目前未公开/未公告，处于保密专利申请的状态。<span>这段时间一般是自申请日起几个月到几十个月，过段时间再来查吧。</span></p>
-            <p>· 检索条件不正确。<span>请您核对是否对搜索条件进行了不正确的字段限定</span>。</p>
-            <p>· 搜索关键词范围太窄。<span>请尝试使用其他关键词或近义词、使用含义更为宽泛的关键词。</span></p>
-            <p>· 非正确的搜索请求 <span>例如：输入的检索的关键词组中间不能包含以下特殊字符 “；”， “——”，“,”,“()”。</span></p>
-          </div>
-          <textarea class="m-advance-monitor" id="Js_advance_monitor" name="q" readonly="readonly"></textarea>
-
-          <input type="hidden" name="sc" value="35184372088831">
-          <div class="m-advance-footer">
-            <a class="ui-button ui-button-lblue btn-loading" id="Js_major_search_btn" data="检索" style="width: 28px; height: 30px;">检索</a>
-            <a class="ui-button ui-button-lwhite" id="Js_major_search_clean">清空</a>
-            <a class="ui-button u-hit-btn Js_hit_btn"><i class="iconfont"></i>查看命中条数</a>
-            <div class="u-hit-tip Js_hit_tip"><span class="fn-hide">已命中 <em class="Js_hit_number"></em> 条数据</span></div>
-          </div>
-        </form>
-      </div>
-
-      <!--字段-->
-      <div class="m-major-fields Js_major_fields m-major-fields-ads">
-        <div class="m-mf-header">
-          <span>关键词</span>
-          <span class="u-btn Js_collapse_btn"></span>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <span class="panel-title">检索表达式预览</span>
         </div>
-
-        <div class="m-mf-body">
-          <div class="m-major-field">
-            <label>所有字段</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="all" data-tip="allTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="all"></i>
+        <div class="panel-body">
+          <form action="/search" method="post" id="Js_major_search_form">
+            <div class="alert alert-dismissible alert-danger" style="margin-bottom: 5px;">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <h1><b>sorry!</b>没有查询到"<span></span>"的相关专利</h1>
+              <p>没有搜索到相关专利，原因可能是：</p>
+              <p>· 此专利不存在。</p>
+              <p>· 通过申请(专利)号、公开(公告)号查询时，请直接输入号码，前面不用加"ZL"或者"CN"。</p>
+              <p>· 该发明创造目前未公开/未公告，处于保密专利申请的状态。<span>这段时间一般是自申请日起几个月到几十个月，过段时间再来查吧。</span></p>
+              <p>· 检索条件不正确。<span>请您核对是否对搜索条件进行了不正确的字段限定</span>。</p>
+              <p>· 搜索关键词范围太窄。<span>请尝试使用其他关键词或近义词、使用含义更为宽泛的关键词。</span></p>
+              <p>· 非正确的搜索请求 <span>例如：输入的检索的关键词组中间不能包含以下特殊字符 “；”， “——”，“,”,“()”。</span></p>
             </div>
-          </div>
-          <div class="m-major-field">
-            <label>专利名称/摘要</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="ti,ab" data-tip="tiTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="ti,ab"></i>
+            <textarea class="form-control" rows="3" id="textArea" name="q" readonly="readonly" style="margin-bottom: 5px;"></textarea>
+            <input type="hidden" name="sc" value="35184372088831">
+            <div class="m-advance-footer">
+              <a href="#" class="btn btn-primary">检索</a>
+              <a href="#" class="btn btn-default">清空</a>
+              <a href="#" class="btn btn-default">查看命中条数 <span class="badge">{{result_num}}</span></a>
             </div>
-          </div>
-
-          <div class="m-major-field">
-            <label>专利名称/摘要/权利要求</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="ti,ab,clm" data-tip="clmTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="ti,ab,clm"></i>
-            </div>
-          </div>
-          <div class="m-major-field">
-            <label>专利名称</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="ti" data-tip="nameTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="ti"></i>
-            </div>
-          </div>
-          <div class="m-major-field">
-            <label>摘要</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="ab" data-tip="abTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="ab"></i>
-            </div>
-          </div>
-
-          <div class="m-major-field">
-            <label>权利要求</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="clm" data-tip="claimTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="clm"></i>
-            </div>
-          </div>
-
-          <div class="m-major-field">
-            <label>说明书</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="des" data-tip="desTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="des"></i>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
 
-      <div class="m-major-fields m-major-date-fields Js_major_fields Js_search_ads" id="Js_mojor_date_fields">
-        <div class="m-mf-header">
-          <span>日期</span>
-          <span class="u-btn Js_collapse_btn"></span>
-        </div>
-
-        <div class="m-mf-body">
-          <div class="m-major-field">
-            <label>申请日</label>
-            <div class="m-major-field-item between">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-              <a class="ui-select ui-date-select Js_date_field_text">
-                      <span>某个时间段</span>
-                      <i class="iconfont"></i>
-                  </a>
-              <input type="text" class="ui-text Js_field_date fn-hide" name="ad">
-              <span class="to fn-hide">to</span>
-              <input type="text" class="ui-text Js_field_date" name="ad">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="ad"></i>
-            </div>
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+            <span class="panel-title">关键词</span>
           </div>
-          <div class="m-major-field ">
-            <label>公开（公告）日</label>
-            <div class="m-major-field-item between">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-              <a class="ui-select ui-date-select Js_date_field_text">
-                      <span>某个时间段</span>
-                      <i class="iconfont"></i>
-                  </a>
-              <input type="text" class="ui-text Js_field_date fn-hide" name="pd">
-              <span class="to fn-hide">to</span>
-              <input type="text" class="ui-text Js_field_date" name="pd">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="pd"></i>
-            </div>
-          </div>
-          <div class="m-major-field ">
-            <label>授权日</label>
-            <div class="m-major-field-item between">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-              <a class="ui-select ui-date-select Js_date_field_text">
-                      <span>某个时间段</span>
-                      <i class="iconfont"></i>
-                  </a>
-              <input type="text" class="ui-text Js_field_date fn-hide" name="apd">
-              <span class="to fn-hide">to</span>
-              <input type="text" class="ui-text Js_field_date" name="apd">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="apd"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="m-major-fields Js_major_fields Js_search_ads">
-        <div class="m-mf-header">
-          <span>号码</span>
-          <span class="u-btn Js_collapse_btn"></span>
-        </div>
-
-        <div class="m-mf-body">
-          <div class="m-major-field">
-            <label>申请号</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="an" data-tip="anTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="an"></i>
-            </div>
-          </div>
-          <div class="m-major-field">
-            <label>公开（公告）号</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="pn" data-tip="pnTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="pn"></i>
-            </div>
-          </div>
-          <div class="m-major-field">
-            <label>优先权号</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="pr" data-tip="prTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="pr"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="m-major-fields Js_major_fields Js_search_ads">
-        <div class="m-mf-header">
-          <span>分类号</span>
-          <span class="u-btn Js_collapse_btn"></span>
-        </div>
-
-        <div class="m-mf-body">
-          <div class="m-major-field">
-            <label>国际分类号（IPC）</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="ic1,ic2" data-tip="ipcTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="ic1,ic2" data-type="ipc"></i>
-
-              <a class="ui-helper Js_field_helper" data-type="ipc">国际分类助手</a>
-            </div>
-          </div>
-          <div class="m-major-field">
-            <label>外观分类(Locarno)</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="ic1,ic2" data-tip="locTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="ic1,ic2" data-type="locarno"></i>
-              <a class="ui-helper Js_field_helper" data-type="locarno">外观分类助手</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="m-major-fields Js_major_fields Js_search_ads">
-        <div class="m-mf-header">
-          <span>名称地址</span>
-          <span class="u-btn Js_collapse_btn"></span>
-        </div>
-
-        <div class="m-mf-body">
-          <div class="m-major-field">
-            <label>申请（专利权）人</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="pa" data-tip="paTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="pa"></i>
-              <a class="ui-helper Js_field_helper_company" data-type="ipc">企业信息库</a>
-            </div>
-          </div>
-          <div class="m-major-field">
-            <label>当前专利权人</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="cpa" data-tip="cpaTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="cpa"></i>
-            </div>
-          </div>
-          <div class="m-major-field search-box-project">
-            <label>股票代码</label>
-            <div class="m-major-field-item" style="position: relative">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text ui-scs" name="cpa" data-tip="scTpl">
-
-              <div class="u-user-searchbox dn">
-
+          <div class="panel-body">
+              <div *ngFor="let k_item of key_group" class="form-group">
+                  <label class="col-lg-2 control-label">{{k_item.title}}</label>
+                  <div class="col-lg-10">
+                    <a class="ui-select"><span>OR</span><i class="iconfont">&#xe637;</i></a>
+                    <input type="text" class="form-control ui-text" name="all">
+                    <i class="iconfont iconfont-plus" data-name="apd">&#xe668;</i>
+                  </div>
               </div>
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="scs"></i>
-
-            </div>
           </div>
-
-
-          <div class="m-major-field">
-            <label>发明人</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="in" data-tip="inTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="in"></i>
-            </div>
+      </div>
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+            <span class="panel-title">日期</span>
           </div>
-          <div class="m-major-field">
-            <label>代理人</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="agt" data-tip="agtTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="agt"></i>
-            </div>
+          <div class="panel-body">
+              <div *ngFor="let d_item of date_group" class="form-group">
+                  <label class="col-lg-2 control-label">{{d_item.title}}</label>
+                  <div class="col-lg-10">
+                    <a class="ui-select"><span>OR</span><i class="iconfont">&#xe637;</i></a>
+                    <a class="ui-select ui-date-select"><span>某个时间段</span><i class="iconfont">&#xe637;</i></a>
+                    <input type="text" class="form-control fn-hide" name="ad">
+                    <span class="to fn-hide">to</span>
+                    <input type="text" class="form-control ui-text" name="ad">
+                    <i class="iconfont iconfont-plus" data-name="apd">&#xe668;</i>
+                  </div>
+              </div>
           </div>
-          <div class="m-major-field">
-            <label>代理机构</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="agc" data-tip="ageTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="agc"></i>
-            </div>
+      </div>
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+            <span class="panel-title">号码</span>
           </div>
-
-          <div class="m-major-field">
-            <label>申请人地址</label>
-            <div class="m-major-field-item">
-              <a class="ui-select Js_field_text">
-                      <span>AND</span>
-                      <i class="iconfont"></i>
-                  </a>
-
-              <input type="text" class="ui-text" name="aa" data-tip="aaTpl">
-
-              <i class="iconfont iconfont-plus Js_field_plus" data-name="aa"></i>
-            </div>
+          <div class="panel-body">
+              <div *ngFor="let c_item of code_group" class="form-group">
+                  <label class="col-lg-2 control-label">{{c_item.title}}</label>
+                  <div class="col-lg-10">
+                    <a class="ui-select"><span>OR</span><i class="iconfont">&#xe637;</i></a>
+                    <input type="text" class="form-control ui-text" name="all">
+                    <i class="iconfont iconfont-plus" data-name="apd">&#xe668;</i>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+            <span class="panel-title">分类号</span>
+          </div>
+          <div class="panel-body">
+              <div *ngFor="let t_item of type_group" class="form-group">
+                  <label class="col-lg-2 control-label">{{t_item.title}}</label>
+                  <div class="col-lg-10">
+                    <a class="ui-select"><span>OR</span><i class="iconfont">&#xe637;</i></a>
+                    <input type="text" class="form-control ui-text" name="all">
+                    <i class="iconfont iconfont-plus" data-name="apd">&#xe668;</i>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+            <span class="panel-title">名称地址</span>
+          </div>
+          <div class="panel-body">
+              <div *ngFor="let na_item of name_group" class="form-group">
+                  <label class="col-lg-2 control-label">{{na_item.title}}</label>
+                  <div class="col-lg-10">
+                    <a class="ui-select"><span>OR</span><i class="iconfont">&#xe637;</i></a>
+                    <input type="text" class="form-control ui-text" name="all">
+                    <i class="iconfont iconfont-plus" data-name="apd">&#xe668;</i>
+                  </div>
+              </div>
+          </div>
       </div>
 
     </div>

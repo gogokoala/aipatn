@@ -1,6 +1,46 @@
+.bg-wrapper{
+  width: 100%;
+  height:100%;
+  background-color:#333;
+  z-index:-99;
+}
+.bg-wrapper .cover{
+  position: absolute;
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
+  z-index:-3;
+  opacity: 1;
+  left:0;right:0;top:0;right:0;
+}
+.bg-wrapper .bg-image{
+  /*z-index:-2;*/
+  width:100%;
+  background-size:cover;
+  background-color: #333333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.bg-wrapper .bg-image-default{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /*z-index:-2;*/
+  width:100%;
+  background:url('../../assets/images/bg/bg01.jpg') no-repeat center #333;
+  background-size:cover;
+  -webkit-background-size: cover;-moz-background-size: cover;
+}
+
 .m-search-main {
   position:absolute;
-  z-index:99;
   margin-left:-360px;
   top:22%;
   left:50%;
