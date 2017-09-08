@@ -1,69 +1,34 @@
 /* complex search */
-.cs-main {
-    position: fixed;
-    background-color: #fff;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 12px;
-    text-align:left;
-    color: #666;
-  }
-.cs-search {
-    min-width: 1300px;
-    overflow-y: auto;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding-top: 10px;
-}
-.cs-database {
-    max-height: 100%!important;
-    overflow-y: auto;
-}
-.cs-filter {
-    max-height: 100%!important;
-    overflow: auto;
-    padding-left: 5px;
-}
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
-}
-::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #F5F5F5;
-}
-::-webkit-scrollbar-thumb
-{
-	background-color: #000000;
-}
-
-.cs-database .cs-database-list {
+.fr-left .cs-database-list {
   padding-left: 10px;
 }
 
 .panel {
   margin-bottom: 6px;
 }
-
 .panel-heading {
   padding: 5px 10px;
 }
-
 .panel-body {
   padding: 5px 10px;
 }
-
 .panel-body > ul {
   padding-left: 10px;
   margin-bottom: 0;
+}
+
+.m-expr {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  margin-right: 45px;
+}
+
+.m-expr-item {
+  max-height: 100%!important;
+  overflow: auto;
+  margin-top: 485px;
 }
 
 .control-label {
@@ -87,13 +52,11 @@
   background: #fff;
   color: #7d7d7d;
 }
-
-.ui-date-select {
+.form-group .ui-date-select {
   width: 112px;
   margin-left: -1px;
 }
-
-.to {
+.form-group .between .to {
   width: 31px;
   text-align: center;
   float: left;
@@ -102,8 +65,11 @@
   top: 6px;
   font-weight: 700;
 }
-
-.ui-text {
+.form-group .between .ui-text {
+  width: 200px;
+  display: block;
+}
+.form-group .ui-text {
   width: 545px;
   height: 32px;
   line-height: 18px;
@@ -115,7 +81,6 @@
   text-indent: 1em;
   border-radius: 0 2px 2px 0;
 }
-
 .iconfont-plus {
   color: #1976D2;
   font-size: 24px;

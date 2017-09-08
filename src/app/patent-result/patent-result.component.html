@@ -1,3 +1,178 @@
-<p>
-  patent-result works!
-</p>
+<div class="container-fluid fr-main">
+  <div class="row fr-disp">
+    <div class="col-xs-2 fr-left">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">筛选项</a>
+        <div>
+          <a href="#" *ngFor="let fi of filter_items" class="list-group-item">{{fi.name}}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-10 fr-right">
+      <div class="g-mn1c m-list hasfilter">
+        <div class="toolbar_fix">
+          <div class="u-toolbar">
+            <div class="serchform">
+              <form action="/search" method="post" class="Js_search">
+                <input type="hidden" value="35184372088831" name="sc">
+                <input type="hidden" value="type:(cn_in OR cn_gp) AND pa_ana:(中国航空工业集团公司西安飞机设计研究所)" name="fq">
+                <input type="hidden" value="s" name="type">
+                <input type="hidden" value="" name="sort">
+                <input type="hidden" value="" name="sortField">
+                <div class="m-search">
+                  <div class="search-div">
+                    <div class="search-div-in">
+                      <input type="text" class="u-search" value="(飞机) AND ab:(机翼支撑) " name="q" autocomplete="off" placeholder="你想找啥？">
+                      <i class="iconfont clean_icon">&#xe65d;</i>
+                    </div>
+                  </div>
+                  <div class="btns">
+                    <button class="search-btn"><i class="iconfont">&#xe60e;</i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="m-holder">
+              <div class="Js_search_container">
+                <div id="Js_container" class="u-header-containter"><span class="m-modal s-modal-0">type</span>:(
+                  <p class="m-modal p-modal-0-0">中国发明专利 <i data-type="type" data-val="cn_in">x</i></p><span class="m-modal relation"> OR </span>
+                  <p class="m-modal p-modal-0-1">中国发明授权专利 <i data-type="type" data-val="cn_gp">x</i></p>) <span class="m-modal relation"> AND </span>
+                  <span class="m-modal s-modal-1">pa</span>:(
+                  <p class="m-modal p-modal-1-0">中国航空工业集团公司西安飞机设计研究所 <i data-type="pa_ana" data-val="中国航空工业集团公司西安飞机设计研究所">x</i></p>)</div>
+              </div>
+              <div class="m-btns">
+                <a href="#" class="btn btn-default btn-xs">过滤</a>
+                <a href="#" class="btn btn-default btn-xs">清除</a>
+              </div>
+            </div>
+            <div style="height: 32px;">
+              <a class="switch_on"><i class="iconfont"></i>图文模式<i class="iconfont down"></i></a>
+              <div class="fn-hide type_switch">
+                <a class="Js_type" data-type="l"><i class="iconfont"></i>列表模式</a>
+                <a class="active Js_type" data-type="s"><i class="iconfont"></i>图文模式</a>
+                <a class="Js_type" data-type="p1"><i class="iconfont"></i>首图模式</a>
+              </div>
+              <a href="#" id="Js_dropdown" class="ui-select-trigger" style="width: 92px;"><i class="iconfont fn-hide"></i>按相关度排序</a>
+            </div>
+          </div>
+        </div>
+        <div class="listLoader-fix Js_bigPic_container" style="top: 240px;">
+          <div class="choice-count Js_choice_count fn-hide">
+            <strong>温馨提示：</strong>您已选择 <em class="Js_count">0</em> 条专利，您可以对其进行收藏和导出操作！
+          </div>
+          <div id="Js_listLoader">
+            <div class="g-bd5 f-cb u-list-main fn-clear list-s">
+              <div class="g-sd51 u-checkall">
+                <label>
+    <p><input type="checkbox" class="Js_checkAll" style="width:15px;height:15px"></p>
+    <p>全选</p>
+</label>
+              </div>
+              <div class="g-mn5">
+                <div class="g-mn5c u-list Js_list ">
+                  <div class="Js_outerList">
+
+                    <div class="u-list-div">
+                      <div class="hot">
+                        <p></p>
+                        <i class="iconfont hoticon"></i>
+                      </div>
+                      <div class="u-top Js_hl fn-clear">
+                        <div class="g-left">
+                          <input type="checkbox" data-no="CN107082122A" data-title="一种大展弦比无人机支撑测量装置系统" data-an="CN201710307480.X" style="vertical-align:middle;margin-right:8px">
+                          <span class="num">1</span> [中国发明]
+
+                        </div>
+                        <div class="fn-left g-right">
+                          <a href="/patent/view.html?patid=CN201710307480.X&amp;sc=35184372088831&amp;q=(%E9%A3%9E%E6%9C%BA)%20AND%20ab%3A(%E6%9C%BA%E7%BF%BC%E6%94%AF%E6%92%91)%20&amp;fq=type%3A(cn_in%20OR%20cn_gp)%20AND%20pa_ana%3A(%E4%B8%AD%E5%9B%BD%E8%88%AA%E7%A9%BA%E5%B7%A5%E4%B8%9A%E9%9B%86%E5%9B%A2%E5%85%AC%E5%8F%B8%E8%A5%BF%E5%AE%89%E9%A3%9E%E6%9C%BA%E8%AE%BE%E8%AE%A1%E7%A0%94%E7%A9%B6%E6%89%80)&amp;sort=&amp;sortField=&amp;page=1&amp;rows=10"
+                            class="c-blue" target="_blank">CN201710307480.X</a>
+                          <a href="/patent/view.html?patid=CN201710307480.X&amp;sc=35184372088831&amp;q=(%E9%A3%9E%E6%9C%BA)%20AND%20ab%3A(%E6%9C%BA%E7%BF%BC%E6%94%AF%E6%92%91)%20&amp;fq=type%3A(cn_in%20OR%20cn_gp)%20AND%20pa_ana%3A(%E4%B8%AD%E5%9B%BD%E8%88%AA%E7%A9%BA%E5%B7%A5%E4%B8%9A%E9%9B%86%E5%9B%A2%E5%85%AC%E5%8F%B8%E8%A5%BF%E5%AE%89%E9%A3%9E%E6%9C%BA%E8%AE%BE%E8%AE%A1%E7%A0%94%E7%A9%B6%E6%89%80)&amp;sort=&amp;sortField=&amp;page=1&amp;rows=10"
+                            target="_blank" class="c-blue title">一种大展弦比无人机支撑测量装置系统</a>
+                          <span class=" u-law-status u-main-law "></span>
+
+                          <div class="translatetitle"></div>
+                        </div>
+                      </div>
+
+                      <div class="u-main fn-clear " data-id="CN201710307480.X" data-cty="cn" data-favourite="false" data-pn="CN107082122A" data-pd="20170822"
+                        data-apn="" data-apd="" data-an="CN201710307480.X" data-ls1="审中-公开" data-ti="一种大展弦比无人机支撑测量装置系统" data-type="cn_in">
+
+                        <div class="g-left sm-c" data-iscnmain="True">
+                          <div class="mbox">
+                            <div class="mleft">
+                              <span class="mmove"></span>
+                              <span class="mmask"></span>
+                              <span class="compare">对比</span>
+                              <img data-type="cn_in" data-an="CN201710307480.X" data-ti="一种大展弦比无人机支撑测量装置系统" data-url="http://cube.patexplorer.com/img/4c3eee7bc029ca0b52035ae3a32e763d/120/180"
+                                class="lazyload" style="width:169px;height:165px;border:1px solid #ccc" src="http://cube.patexplorer.com/img/4c3eee7bc029ca0b52035ae3a32e763d/120/180">
+                            </div>
+                          </div>
+                          <div class="mright"><img preload-src="http://cube.patexplorer.com/img/4c3eee7bc029ca0b52035ae3a32e763d/960/0"> </div>
+                          <!--<img data-url="http://cube.patexplorer.com/view/CN107082122A/20170822/fy/1/169/165" src="" class="lazyload" style="width:169px;height:165px;border:1px solid #ccc"/>-->
+                        </div>
+                        <div style="float:left;width:100%;">
+
+                          <div class=" g-right Js_tip Js_hl" data-id="CN201710307480.X" data-cty="cn" data-favourite="false" data-pn="CN107082122A"
+                            data-pd="20170822" data-apn="" data-apd="" data-an="CN201710307480.X">
+
+                            <!--<div class="fn-left g-right Js_tip" data-pn="CN107082122A" data-pd="20170822" data-apn="" data-apd="">-->
+                            <div>
+                              <p><strong>公开（公告）号：</strong>
+                                <a href="/patent/view.html?patid=CN201710307480.X&amp;sc=35184372088831&amp;q=(%E9%A3%9E%E6%9C%BA)%20AND%20ab%3A(%E6%9C%BA%E7%BF%BC%E6%94%AF%E6%92%91)%20&amp;fq=type%3A(cn_in%20OR%20cn_gp)%20AND%20pa_ana%3A(%E4%B8%AD%E5%9B%BD%E8%88%AA%E7%A9%BA%E5%B7%A5%E4%B8%9A%E9%9B%86%E5%9B%A2%E5%85%AC%E5%8F%B8%E8%A5%BF%E5%AE%89%E9%A3%9E%E6%9C%BA%E8%AE%BE%E8%AE%A1%E7%A0%94%E7%A9%B6%E6%89%80)&amp;sort=&amp;sortField=&amp;page=1&amp;rows=10"
+                                  class="c-blue" target="_blank">
+                                  <!--CN107082122A-->CN107082122A</a>
+                              </p>
+                              <p><strong>申请（专利权）人：</strong><a href="/results/s.html?q=pa:(%E4%B8%AD%E5%9B%BD%E8%88%AA%E7%A9%BA%E5%B7%A5%E4%B8%9A%E9%9B%86%E5%9B%A2%E5%85%AC%E5%8F%B8%E8%A5%BF%E5%AE%89%E9%A3%9E%E6%9C%BA%E8%AE%BE%E8%AE%A1%E7%A0%94%E7%A9%B6%E6%89%80)"
+                                  target="_blank" class="">中国航空工业集团公司西安<span class="c-highligth-default">飞</span><span class="c-highligth-default">机</span>设计研究所</a></p>
+                            </div>
+                            <div>
+                              <p><strong>申请日：</strong>
+                                <a href="/results/l.html?q=ad:(20170504)" target="_blank">
+                                  <!--20170504-->20170504</a>
+                              </p>
+                              <p><strong>主分类号：</strong><a href="/results/l.html?q=ic1:()" target="_blank"></a></p>
+                            </div>
+                            <div>
+                              <p><strong>公开（公告）日：</strong><a href="/results/l.html?q=pd:(20170822)" target="_blank">20170822</a></p>
+
+                            </div>
+
+
+
+                            <div>
+                              <strong>摘要：</strong>
+
+                              <span class="content">本发明提供一种大展弦比无人机支撑测量装置系统，包括<span class="c-highligth-default">机</span>
+                              <span class="c-highligth-default">翼</span><span class="c-highligth-default">支</span><span class="c-highligth-default">撑</span>测量装置(1)和机身支撑装置(2)，
+                              <span class="c-highligth-default">机</span><span class="c-highligth-default">翼</span><span class="c-highligth-default">支</span>
+                              <span class="c-highligth-default">撑</span>测量装置(1)中的第一底座为长方体盒状构件，该盒状第一底座的一端设置有第一车轮，另一端则套装有升降装置，该升降装置上还设置有测量高度变化的测量装置，同时该升降装置通过机翼蒙皮夹具设置有盒盖的一端将其扣合于盒状第一底座中，机翼蒙皮夹具另一端为扣合端，用于扣合无人机机翼；机身支撑装置(2)中的第二底座为长方体盒状构件，盒状第二底座的一端设置有第二车轮，另一端则安装有机身夹具。本发明所提供的装置系统，用于支撑无人机的机翼与机身，避免机翼长时间大挠度变形造成机构破坏，同时也可测量机翼的变形量。</span>
+
+                            </div>
+                            <div class="translatecontent"></div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                  <div id="paging" style="visibility: visible;"></div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
