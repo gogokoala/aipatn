@@ -9,8 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
-import { LegalInstrumentsComponent } from './legal-instruments/legal-instruments.component';
-import { PatentComponent } from './patent/patent.component';
+//import { LegalInstrumentsComponent } from './legal-instruments/legal-instruments.component';
+//import { PatentComponent } from './patent/patent.component';
 import { SimpleComponent } from './simple/simple.component';
 import { ComplexComponent } from './complex/complex.component';
 import { PatentResultComponent } from './patent-result/patent-result.component';
@@ -20,8 +20,8 @@ import { PatentResultComponent } from './patent-result/patent-result.component';
     AppComponent,
     AppHeaderComponent,
     AppFooterComponent,
-    LegalInstrumentsComponent,
-    PatentComponent,
+  //  LegalInstrumentsComponent,
+  //  PatentComponent,
     SimpleComponent,
     ComplexComponent,
     PatentResultComponent
