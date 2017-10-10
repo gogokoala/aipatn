@@ -14,6 +14,7 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
 import { SimpleComponent } from './simple/simple.component';
 import { ComplexComponent } from './complex/complex.component';
 import { PatentResultComponent } from './patent-result/patent-result.component';
+import { OAuth2CallbackComponent } from './oauth2-callback/oauth2-callback.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PatentResultComponent } from './patent-result/patent-result.component';
   //  PatentComponent,
     SimpleComponent,
     ComplexComponent,
-    PatentResultComponent
+    PatentResultComponent,
+    OAuth2CallbackComponent
   ],
   imports: [
     BrowserModule,
